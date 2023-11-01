@@ -6,11 +6,10 @@ Example of docker-compose file :
 ````yaml
 version: '3'
 services:
-  deluged21:
+  deluged:
     build: .
-    container_name: deluged21
+    container_name: deluged
     network_mode: service:wireguard21
     volumes:
       - ./Docker/config/deluge:/root/.config/deluge # To override default configuration
     restart: unless-stopped
-```
